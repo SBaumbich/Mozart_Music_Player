@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Working_With_Audio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTO-Py-SbN">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <animations/>
+                                <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Mozart's Finest" id="9y5-aL-EmR">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="LyK-7z-6qP">
+                                            <connections>
+                                                <action selector="Play:" destination="BYZ-38-t0r" id="j8C-Ql-RcB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81Z-ec-aLp">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="hGK-75-pAT">
+                                        <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="ZaV-xl-dzl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wJs-EM-vAJ">
+                                        <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="stop" id="SM7-jT-1yp">
+                                        <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="hbp-PQ-gtX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mozart.png" translatesAutoresizingMaskIntoConstraints="NO" id="rYn-xK-cEv">
+                                <rect key="frame" x="110" y="121.5" width="379" height="357"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rYn-xK-cEv" secondAttribute="height" multiplier="379:357" id="2A3-Hc-Z3w"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vae-wk-QL0">
+                                <rect key="frame" x="163" y="83" width="274" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="xyV-tl-ziM"/>
+                                    <constraint firstAttribute="height" constant="30" id="z9u-fy-1Og"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="ChangeVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="S9l-Cv-xuq"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IV7-4D-Ui8">
+                                <rect key="frame" x="163" y="486" width="274" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="OS7-Ms-sid"/>
+                                    <constraint firstAttribute="height" constant="30" id="U2s-US-M6C"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="ChangeVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="786-Xw-hGR"/>
+                                    <action selector="audioPlaybackSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="7QH-9N-Pmx"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.33599668560606055" green="0.33599668560606055" blue="0.33599668560606055" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XTO-Py-SbN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2Ye-OA-QkR"/>
+                            <constraint firstAttribute="trailing" secondItem="81Z-ec-aLp" secondAttribute="trailing" id="BEv-Iq-XZc"/>
+                            <constraint firstItem="vae-wk-QL0" firstAttribute="top" secondItem="rYn-xK-cEv" secondAttribute="bottom" constant="8" id="CiG-pa-eYh"/>
+                            <constraint firstItem="rYn-xK-cEv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EKF-Uz-LX1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="81Z-ec-aLp" secondAttribute="bottom" id="Kc4-cC-ELJ"/>
+                            <constraint firstAttribute="trailing" secondItem="XTO-Py-SbN" secondAttribute="trailing" id="Usd-io-CUK"/>
+                            <constraint firstItem="rYn-xK-cEv" firstAttribute="top" secondItem="vae-wk-QL0" secondAttribute="bottom" constant="8" id="VVK-fP-OPT"/>
+                            <constraint firstItem="rYn-xK-cEv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W4Z-IC-Rme"/>
+                            <constraint firstItem="vae-wk-QL0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="der-Gi-Un8"/>
+                            <constraint firstItem="IV7-4D-Ui8" firstAttribute="top" secondItem="rYn-xK-cEv" secondAttribute="bottom" constant="8" id="iHw-hg-nI6"/>
+                            <constraint firstItem="IV7-4D-Ui8" firstAttribute="top" secondItem="vae-wk-QL0" secondAttribute="bottom" constant="7.5" id="pLs-0W-XE3"/>
+                            <constraint firstItem="81Z-ec-aLp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qKQ-Tk-Q9Y"/>
+                            <constraint firstItem="XTO-Py-SbN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rMW-9L-Wu0"/>
+                            <constraint firstItem="IV7-4D-Ui8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uQ7-yh-tlq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CiG-pa-eYh"/>
+                                <exclude reference="pLs-0W-XE3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="playBackSlider" destination="IV7-4D-Ui8" id="6f7-QR-p8p"/>
+                        <outlet property="slider" destination="vae-wk-QL0" id="MFk-3G-xA6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mozart.png" width="379" height="357"/>
+    </resources>
+</document>
